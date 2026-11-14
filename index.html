@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nominate Martin Lichtwark for the 2027 Snowflake Data Superhero Program</title>
+<meta name="description" content="Martin Lichtwark, Head of Data & AI at hepster in Rostock, is applying to the 2027 Snowflake Data Superhero Program. See the work behind it and nominate him in about 5 minutes.">
+<meta property="og:title" content="Nominate Martin Lichtwark for the 2027 Snowflake Data Superhero Program">
+<meta property="og:description" content="From a maxed-out Postgres to Snowflake in six weeks, to a Snowflake community on the Baltic coast. Nomination takes about 5 minutes.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0A2F45">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9B%B5%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap">
+<style>
+  :root {
+    --paper: #F6F4EF;  --card: #FFFFFF;  --ink: #14232C;  --muted: #55666F;
+    --rule: #D9D5CA;   --brick: #A83B2A; --sea: #0A2F45;  --ice: #8FD3F0;
+    --link: #0B5E83;
+    --head: "Archivo", "Arial Narrow", "Segoe UI", system-ui, sans-serif;
+    --text: "Literata", Georgia, "Times New Roman", serif;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0C1A22; --card: #12262F; --ink: #E9EFF1; --muted: #9FB1B9;
+      --rule: #25404C; --brick: #E5917B; --link: #7CC9EA;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0C1A22; --card: #12262F; --ink: #E9EFF1; --muted: #9FB1B9;
+    --rule: #25404C; --brick: #E5917B; --link: #7CC9EA;
+  }
+  html { scroll-behavior: smooth; scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 20px); }
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1.0625rem/1.7 var(--text); -webkit-font-smoothing: antialiased; }
+  a { color: var(--link); text-underline-offset: 3px; }
+  a:hover { color: var(--brick); }
+  :focus-visible { outline: 3px solid var(--brick); outline-offset: 3px; border-radius: 3px; }
+  h1, h2, h3 { font-family: var(--head); margin: 0; letter-spacing: -0.015em; line-height: 1.1; }
+  p { margin: 0 0 1em; max-width: 62ch; }
+
+  .layout { display: grid; grid-template-columns: minmax(0, 1fr); }
+  @media (min-width: 980px) { .layout { grid-template-columns: 410px minmax(0, 1fr); } }
+
+  /* ---------- side panel (always dark sea) ---------- */
+  .panel { background: var(--sea); color: #E6F1F6; padding: 34px 28px 30px; }
+  .panel a { color: var(--ice); }
+  .panel a:hover { color: #fff; }
+  @media (min-width: 980px) {
+    .panel {
+      position: sticky; top: env(safe-area-inset-top, 0px);
+      height: calc(100vh - env(safe-area-inset-top, 0px)); height: calc(100dvh - env(safe-area-inset-top, 0px));
+      overflow-y: auto; padding: 40px 34px 34px;
+    }
+  }
+  .panel .who { font: 800 1rem var(--head); font-stretch: 110%; color: var(--ice); margin: 0 0 22px; }
+  .panel h1 { font-size: clamp(2rem, 4.6vw, 2.7rem); font-weight: 800; font-stretch: 92%; color: #fff; }
+  .panel .pitch { margin-top: 16px; font-size: 1rem; line-height: 1.6; color: #C9DCE6; }
+  .go { display: block; text-align: center; margin-top: 22px; padding: 15px 20px; border-radius: 8px; background: #fff; color: var(--sea) !important; font: 800 1.02rem var(--head); text-decoration: none; }
+  .go:hover { background: var(--ice); }
+  .when { margin: 12px 0 0; font-size: .92rem; color: #A9C3D0; }
+  .when b { color: #fff; }
+
+  .helper { margin-top: 26px; border-top: 1px solid rgba(255,255,255,.2); padding-top: 18px; }
+  .helper > h2 { font-size: 1.05rem; font-weight: 800; color: #fff; margin-bottom: 4px; }
+  .helper > p { font-size: .9rem; color: #A9C3D0; margin-bottom: 12px; line-height: 1.5; }
+  details { border-top: 1px solid rgba(255,255,255,.14); }
+  details:last-of-type { border-bottom: 1px solid rgba(255,255,255,.14); }
+  summary { cursor: pointer; padding: 12px 0; font: 700 .98rem var(--head); color: #fff; list-style: none; display: flex; justify-content: space-between; gap: 10px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; font-weight: 500; color: var(--ice); }
+  details[open] summary::after { content: "–"; }
+  .dbody { padding: 0 0 14px; font-size: .92rem; line-height: 1.55; color: #C9DCE6; }
+  .dbody p { margin: 0 0 8px; max-width: none; }
+  .row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; align-items: center; padding: 8px 0; border-top: 1px dashed rgba(255,255,255,.18); }
+  .row:first-of-type { border-top: 0; }
+  .row small { display: block; color: #8FB0C1; font-size: .78rem; font-family: var(--head); }
+  .row .val { color: #fff; font-weight: 600; overflow-wrap: anywhere; user-select: all; }
+  .copy { font: 700 .8rem var(--head); padding: 6px 12px; border-radius: 6px; border: 1.5px solid var(--ice); background: transparent; color: var(--ice); cursor: pointer; min-width: 64px; }
+  .copy:hover { background: var(--ice); color: var(--sea); }
+  .copy.done { background: var(--ice); color: var(--sea); }
+  .sharebtn { margin-top: 16px; width: 100%; padding: 11px; border-radius: 8px; border: 1.5px solid rgba(255,255,255,.35); background: transparent; color: #fff; font: 700 .92rem var(--head); cursor: pointer; }
+  .sharebtn:hover { border-color: var(--ice); }
+  .toast { display: block; min-height: 1.3em; margin-top: 6px; font-size: .85rem; color: #A9C3D0; }
+  .legal { margin-top: 20px; font-size: .78rem; line-height: 1.5; color: #8FB0C1; }
+
+  /* ---------- main column ---------- */
+  main { padding: 44px 24px 120px; }
+  @media (min-width: 980px) { main { padding: 64px 56px 80px; } }
+  .inner { max-width: 760px; }
+  .kicker { font: 600 1.35rem/1.4 var(--text); max-width: 34ch; margin: 0 0 8px; }
+  .intro { color: var(--muted); }
+
+  h2.sec { font-size: clamp(1.7rem, 3.4vw, 2.3rem); font-weight: 800; font-stretch: 95%; margin: 64px 0 6px; }
+  .secsub { color: var(--muted); margin-bottom: 26px; }
+
+  /* timeline */
+  .tl { list-style: none; margin: 0; padding: 0 0 0 26px; border-left: 3px solid var(--ink); }
+  .tl li { position: relative; padding: 0 0 34px 22px; }
+  .tl li::before { content: ""; position: absolute; left: -36px; top: .55em; width: 17px; height: 17px; border-radius: 50%; background: var(--paper); border: 3px solid var(--ink); }
+  .tl li.hi::before { background: var(--brick); border-color: var(--brick); }
+  .tl .at { font: 700 .95rem var(--head); color: var(--brick); margin-bottom: 2px; }
+  .tl h3 { font-size: 1.35rem; font-weight: 800; font-stretch: 95%; margin-bottom: 8px; }
+  .tl p { margin-bottom: .7em; }
+  .tl .prize { background: var(--card); border: 1px solid var(--rule); border-left: 6px solid var(--brick); border-radius: 6px; padding: 16px 18px; margin-top: 10px; }
+  .tl .prize p { margin: 0; }
+
+  /* numbers */
+  .nums { margin: 0; padding: 0; list-style: none; border-top: 3px solid var(--ink); }
+  .nums li { display: grid; grid-template-columns: minmax(0, 150px) minmax(0, 1fr); gap: 18px; align-items: baseline; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+  .nums .n { font: 900 clamp(2rem, 6vw, 2.8rem)/1 var(--head); font-stretch: 85%; color: var(--brick); letter-spacing: -0.02em; }
+  .nums .t { margin: 0; }
+
+  /* ledger */
+  .ledger { border-top: 3px solid var(--ink); }
+  .lrow { display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; padding: 20px 0; border-bottom: 1px solid var(--rule); }
+  @media (min-width: 700px) { .lrow { grid-template-columns: 150px minmax(0, 1fr); gap: 22px; } }
+  .lrow > h3 { font-size: 1.1rem; font-weight: 800; }
+  .lrow ul { margin: 0; padding: 0; list-style: none; }
+  .lrow li { margin-bottom: .55em; line-height: 1.5; }
+  .lrow small { display: block; color: var(--muted); font-size: .9rem; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 6px; }
+  .tags a { font-size: .95rem; }
+
+  /* plans */
+  .plans { margin: 0; padding: 0; list-style: none; display: grid; gap: 14px; }
+  .plans li { background: var(--card); border: 1px solid var(--rule); border-radius: 8px; padding: 18px 20px; }
+  .plans h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 4px; }
+  .plans p { margin: 0; color: var(--muted); }
+  .motto { margin: 48px 0 0; font: 800 clamp(1.7rem, 4vw, 2.5rem)/1.12 var(--head); font-stretch: 90%; max-width: 20ch; }
+
+  footer { margin-top: 56px; padding-top: 22px; border-top: 1px solid var(--rule); color: var(--muted); font-size: .92rem; }
+  footer p { margin-bottom: .5em; }
+
+  /* mobile action bar */
+  .bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; display: flex; gap: 10px; align-items: center; justify-content: space-between; padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px)); background: var(--sea); color: #fff; box-shadow: 0 -4px 14px rgba(0,0,0,.22); }
+  .bar span { font: 700 .92rem var(--head); }
+  .bar a { background: #fff; color: var(--sea); font: 800 .95rem var(--head); padding: 10px 16px; border-radius: 8px; text-decoration: none; white-space: nowrap; }
+  @media (min-width: 980px) { .bar { display: none; } }
+
+  @media (max-width: 520px) { .nums li { grid-template-columns: minmax(0, 1fr); gap: 4px; } }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<div class="layout">
+
+  <!-- ===== side panel ===== -->
+  <aside class="panel" id="top">
+    <p class="who">Martin Lichtwark</p>
+    <h1>Nominate me for the 2027 Snowflake Data Superhero Program</h1>
+    <p class="pitch">I lead Data &amp; AI at hepster, an insurtech in Rostock on Germany’s Baltic coast. I share what we learn with Snowflake in the open, and I’m building a Snowflake community in a region that had none.</p>
+
+    <a class="go" href="https://www.surveymonkey.com/r/dshnomination" rel="noopener">Open the nomination form</a>
+    <p class="when" id="deadline">About 5 minutes. Applications close <b>December 18, 2026</b>.</p>
+
+    <div class="helper">
+      <h2>Fill in the form faster</h2>
+      <p>Six short questions. Open a step to copy what you need.</p>
+
+      <details>
+        <summary>1. Your details</summary>
+        <div class="dbody"><p>Enter your own name, company, and email address.</p></div>
+      </details>
+
+      <details>
+        <summary>2. Nominee’s details</summary>
+        <div class="dbody">
+          <div class="row"><div><small>Name</small><span class="val">Martin Lichtwark</span></div><button class="copy" type="button">Copy</button></div>
+          <div class="row"><div><small>Company</small><span class="val">MOINsure GmbH (hepster)</span></div><button class="copy" type="button">Copy</button></div>
+          <div class="row"><div><small>Email</small><span class="val">martin.lichtwark@hepster.com</span></div><button class="copy" type="button">Copy</button></div>
+        </div>
+      </details>
+
+      <details>
+        <summary>3. Where to find me online</summary>
+        <div class="dbody">
+          <div class="row"><div><small>LinkedIn</small><span class="val">https://www.linkedin.com/in/mlichtwark</span></div><button class="copy" type="button">Copy</button></div>
+          <div class="row"><div><small>Snowflake Community</small><span class="val">https://snowflake.discourse.group/u/snowmart</span></div><button class="copy" type="button">Copy</button></div>
+          <div class="row"><div><small>Reddit</small><span class="val">https://www.reddit.com/u/dataregulator3</span></div><button class="copy" type="button">Copy</button></div>
+          <div class="row"><div><small>GitHub</small><span class="val">https://github.com/dataregulator3</span></div><button class="copy" type="button">Copy</button></div>
+          <div class="row"><div><small>Meetup</small><span class="val">https://events.data-rostock.de/</span></div><button class="copy" type="button">Copy</button></div>
+          <p style="margin-top:8px">No blog or podcast yet, so leave those blank.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>4. How I contribute</summary>
+        <div class="dbody"><p>Select only what you have personally seen. The options that fit my work: written content, code and apps, speaking, and leading a community or meetup. The form’s wording may differ.</p></div>
+      </details>
+
+      <details>
+        <summary>5. Why I stand out</summary>
+        <div class="dbody"><p>A few honest lines in your own words are enough: how you found my work, which post, talk, or repo helped you, or what you took from a Baltic Sea meetup. Your experience matters more than a generic endorsement.</p></div>
+      </details>
+
+      <details>
+        <summary>6. Mentioning your nomination</summary>
+        <div class="dbody"><p>Choose Yes or No. Either is fine, and it’s entirely your call. You can also email yourself a copy of your answers.</p></div>
+      </details>
+
+      <button class="sharebtn" type="button" id="sharebtn">Copy this page’s link</button>
+      <span class="toast" id="toast" role="status" aria-live="polite"></span>
+    </div>
+
+    <p class="legal">Personal page. Not affiliated with or endorsed by Snowflake Inc. or hepster. Program details at <a href="https://www.snowflake.com/en/data-superheroes/" rel="noopener">snowflake.com/en/data-superheroes</a>.</p>
+  </aside>
+
+  <!-- ===== main column ===== -->
+  <main>
+    <div class="inner">
+      <p class="kicker">A small team, no extra budget, and a habit of telling people how it went.</p>
+      <p class="intro">Here’s the path from our first Snowflake login to a regional community, in the order it happened.</p>
+
+      <h2 class="sec">The story so far</h2>
+      <p class="secsub">Everything below is something you can check.</p>
+
+      <ol class="tl">
+        <li>
+          <div class="at">November 2025</div>
+          <h3>We become a Snowflake customer</h3>
+          <p>I started posting about the journey during the evaluation itself. The Snowflake hands-on badges were done before the contract was signed, and I passed SnowPro Core.</p>
+        </li>
+        <li>
+          <div class="at">The first six weeks</div>
+          <h3>85% of a migration, with no new hires</h3>
+          <p>Our PostgreSQL database was at its limit and there was no budget for more people. With SnowConvert and Cortex Code doing much of the heavy lifting, we moved 85% of the migration in six weeks and shipped.</p>
+          <p>That became our “first-enable” approach: new data products and AI use cases go from idea to production far faster.</p>
+        </li>
+        <li>
+          <div class="at">2026</div>
+          <h3>Adopting almost every new feature</h3>
+          <p>From Openflow to Cortex Code (CoCo) and the Cortex AI Functions, we tried things as they landed. Two customer stories are now in progress with Snowflake: AI adoption up 16× in five months, and 32 monthly insurance reports produced in 18 minutes.</p>
+          <p>I took part in three Snowflake reference calls with prospective customers, and hepster’s leadership sent me to Snowflake Summit.</p>
+        </li>
+        <li>
+          <div class="at">Summer and autumn 2026</div>
+          <h3>Going on stage and joining the community</h3>
+          <p>I joined Snowflake Squad, presented “Schluss mit Daten.Warten” at the kickoff of the new Rostock AI community KI oder K.O. on September 9, and gave “From zero to heppyHero” at Snowflake World Tour Berlin on September 29, right before the keynote.</p>
+        </li>
+        <li>
+          <div class="at">Autumn 2026</div>
+          <h3>Giving the learning material away</h3>
+          <p>I published a free, offline SnowPro Core question catalog built from the official study guide, put the source on GitHub, and wrote up what worked on r/snowflake, including the unglamorous parts like cost management turning into a data outage.</p>
+        </li>
+        <li class="hi">
+          <div class="at">2026</div>
+          <h3>Rising Community Leader of the Year, EMEA</h3>
+          <div class="prize"><p>Winner at the 2026 Snowflake Community Awards. Thank you to everyone who nominated, voted, and showed up.</p></div>
+        </li>
+        <li class="hi">
+          <div class="at">Now, and 2027</div>
+          <h3>A Snowflake community on the Baltic coast</h3>
+          <p>The Baltic Sea Snowflake Meetup meets regularly in Rostock, and companies from across the region already join. The plan for 2027 is an official Snowflake user group, plus a talk at contxtum in Cologne.</p>
+        </li>
+      </ol>
+
+      <h2 class="sec">Three numbers</h2>
+      <p class="secsub">What “small team” meant in practice.</p>
+      <ul class="nums">
+        <li><span class="n">6 weeks</span><p class="t">to move 85% of our Postgres migration to Snowflake.</p></li>
+        <li><span class="n">16×</span><p class="t">growth in AI adoption over five months with Snowflake CoCo Desktop.</p></li>
+        <li><span class="n">18 min</span><p class="t">for 32 monthly insurance reports that used to be manual.</p></li>
+      </ul>
+
+      <h2 class="sec">Where to see the work</h2>
+      <p class="secsub">Grouped by what it is, so you can open the kind you care about.</p>
+      <div class="ledger">
+        <div class="lrow">
+          <h3>Writing</h3>
+          <ul>
+            <li><a href="https://www.reddit.com/r/snowflake/comments/1xgujtf/my_favorite_ways_to_learn_snowflake_handson/" rel="noopener">My favorite ways to learn Snowflake hands-on</a></li>
+            <li><a href="https://www.reddit.com/r/snowflake/comments/1xjaq61/i_built_a_free_offline_snowpro_core_cofc03/" rel="noopener">I built a free, offline SnowPro Core (COF-C03) question catalog</a></li>
+            <li><a href="https://www.reddit.com/r/snowflake/comments/1xasv36/cortex_agents_snowflake_cowork_long_conversations/" rel="noopener">Cortex Agents and Snowflake CoWork: long conversations</a></li>
+            <li><a href="https://www.reddit.com/r/snowflake/comments/1xar50z/has_anyone_built_a_genai_hub_chatgptstyle_on/" rel="noopener">Has anyone built a GenAI hub (ChatGPT-style) on Snowflake?</a></li>
+            <li><a href="https://www.reddit.com/r/snowflake/comments/1x7sqjw/when_cost_management_becomes_a_data_outage/" rel="noopener">When cost management becomes a data outage</a></li>
+            <li><small>I write in English and German, on Reddit and LinkedIn.</small>
+              <div class="tags"><a href="https://www.reddit.com/u/dataregulator3/s/kOJdn7KToY" rel="noopener">Reddit profile</a><a href="https://www.linkedin.com/in/mlichtwark" rel="noopener">LinkedIn profile</a><a href="https://lnkd.in/p/dAU-uRGG" rel="noopener">Post 1</a><a href="https://lnkd.in/p/dCEYPaAC" rel="noopener">Post 2</a><a href="https://lnkd.in/p/dj4XXYv9" rel="noopener">Post 3</a><a href="https://lnkd.in/p/dAZVpsTd" rel="noopener">Post 4</a></div></li>
+          </ul>
+        </div>
+        <div class="lrow">
+          <h3>Code</h3>
+          <ul>
+            <li><a href="https://github.com/dataregulator3/snowflake-community-resources" rel="noopener">snowflake-community-resources</a><small>The SnowPro Core catalog and other learning material, free to use.</small></li>
+            <li><a href="https://github.com/dataregulator3" rel="noopener">github.com/dataregulator3</a></li>
+          </ul>
+        </div>
+        <div class="lrow">
+          <h3>Talks</h3>
+          <ul>
+            <li>Snowflake World Tour Berlin, September 29, 2026</li>
+            <li>KI oder K.O., Rostock, September 9, 2026</li>
+            <li><a href="https://connect.digital-x.eu/en/events/2026/digital-x-ost-p965/speaker/martin-lichtwark-p2858" rel="noopener">digital-x Ost 2026 speaker profile</a></li>
+            <li><a href="https://www.wirtschaftsinformatik.uni-rostock.de/en/chair/chair-overview/news-in-detail/n/review-of-the-big-data-workshop-30-llms-202083" rel="noopener">Big Data Workshop 3.0 (LLMs), University of Rostock</a></li>
+            <li>Octonomy community: masterclasses and interviews
+              <div class="tags"><a href="https://lnkd.in/p/dq2tcKsE" rel="noopener">Talk 1</a><a href="https://lnkd.in/p/dRhvVkda" rel="noopener">Talk 2</a><a href="https://lnkd.in/p/dZGS_Q-Y" rel="noopener">Talk 3</a><a href="https://lnkd.in/p/dvSsJX2D" rel="noopener">Talk 4</a><a href="https://lnkd.in/p/dFVXsc9E" rel="noopener">Talk 5</a><a href="https://lnkd.in/p/dmFkEq9f" rel="noopener">Video 1</a><a href="https://lnkd.in/p/dnQgCK4Z" rel="noopener">Video 2</a></div></li>
+          </ul>
+        </div>
+        <div class="lrow">
+          <h3>Community</h3>
+          <ul>
+            <li><a href="https://events.data-rostock.de/" rel="noopener">Baltic Sea Snowflake Meetup: events and tickets</a></li>
+            <li><a href="https://snowflake.discourse.group/u/snowmart" rel="noopener">Snowflake Community profile (snowmart)</a></li>
+            <li><a href="https://achieve.snowflake.com/profile/mclichtwark/wallet" rel="noopener">Badges and certifications</a></li>
+            <li>Snowflake Squad member, and part of the Berlin and Hamburg user groups</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 class="sec">What I’ll do with it</h2>
+      <p class="secsub">Being a Data Superhero is a way of working, not a title to collect.</p>
+      <ul class="plans">
+        <li><h3>Turn early insight into useful content</h3><p>Practical, field-tested, honest about trade-offs, in English and German.</p></li>
+        <li><h3>Bring the network to the Baltic coast</h3><p>Product deep dives and Superhero knowledge in our meetups, so local companies learn from practitioners and not only from slides.</p></li>
+        <li><h3>Keep Snowflake reachable for small teams</h3><p>Many organizations here are curious about data and AI but have no big team or budget. I want to show what a few people can do in a few weeks.</p></li>
+        <li><h3>Carry regional feedback to the product teams</h3><p>With a focus on agentic enterprise, AI-ready data, and autonomous data engineering.</p></li>
+      </ul>
+      <p class="motto">Learn. Apply. Share. Multiply.</p>
+
+      <footer>
+        <p>Thank you for being part of a community that learns, builds, and grows together.</p>
+        <p>Martin Lichtwark, Head of Data &amp; AI at hepster, Rostock.</p>
+      </footer>
+    </div>
+  </main>
+</div>
+
+<div class="bar">
+  <span id="barText">Nominate Martin</span>
+  <a href="https://www.surveymonkey.com/r/dshnomination" rel="noopener">Open form</a>
+</div>
+
+<script>
+(function () {
+  try {
+    var end = new Date(2026, 11, 18, 23, 59, 59);
+    var days = Math.ceil((end - new Date()) / 86400000);
+    var el = document.getElementById('deadline');
+    var bar = document.getElementById('barText');
+    if (days > 1) {
+      el.innerHTML = 'About 5 minutes. Applications close <b>December 18, 2026</b>, ' + days + ' days left.';
+      bar.textContent = days + ' days left to nominate';
+    } else if (days === 1) {
+      el.innerHTML = 'About 5 minutes. Applications close <b>today</b>.';
+      bar.textContent = 'Last day to nominate';
+    } else {
+      el.textContent = 'Applications for 2027 have closed. Thank you for the support.';
+    }
+  } catch (e) { /* keep static text */ }
+
+  function legacyCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    document.body.removeChild(ta);
+    return ok;
+  }
+  function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      return navigator.clipboard.writeText(text).then(function () { return true; }, function () { return legacyCopy(text); });
+    }
+    return Promise.resolve(legacyCopy(text));
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll('.copy'), function (btn) {
+    btn.addEventListener('click', function () {
+      var val = btn.parentNode.querySelector('.val');
+      copyText(val.textContent.trim()).then(function (ok) {
+        btn.textContent = ok ? 'Copied' : 'Select text';
+        if (ok) btn.classList.add('done');
+        setTimeout(function () { btn.textContent = 'Copy'; btn.classList.remove('done'); }, 1800);
+      });
+    });
+  });
+
+  var share = document.getElementById('sharebtn');
+  var toast = document.getElementById('toast');
+  share.addEventListener('click', function () {
+    copyText(location.href.split('#')[0]).then(function (ok) {
+      toast.textContent = ok ? 'Link copied.' : 'Copy the address from your browser’s address bar.';
+      setTimeout(function () { toast.textContent = ''; }, 2500);
+    });
+  });
+})();
+</script>
+</body>
+</html>
