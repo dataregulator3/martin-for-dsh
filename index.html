@@ -98,6 +98,7 @@
   h2.sec { font-size: clamp(1.7rem, 3.4vw, 2.3rem); font-weight: 800; font-stretch: 95%; margin: 64px 0 6px; }
   .secsub { color: var(--muted); margin-bottom: 26px; }
 
+
   /* timeline */
   .tl { list-style: none; margin: 0; padding: 0 0 0 26px; border-left: 3px solid var(--ink); }
   .tl li { position: relative; padding: 0 0 34px 22px; }
@@ -153,14 +154,25 @@
   <aside class="panel" id="top">
     <p class="who">Martin Lichtwark</p>
     <h1>Nominate me for the 2027 Snowflake Data Superhero Program</h1>
-    <p class="pitch">I lead Data &amp; AI at hepster, an insurtech in Rostock on Germany’s Baltic coast. I share what we learn with Snowflake in the open, and I’m building a Snowflake community in a region that had none.</p>
+    <p class="pitch">I lead Data &amp; AI at hepster, an insurtech in Rostock on Germany’s Baltic coast. I share what we learn with Snowflake in the open, and I’m building a Snowflake community from scratch on the Baltic coast.</p>
 
     <a class="go" href="https://www.surveymonkey.com/r/dshnomination" rel="noopener">Open the nomination form</a>
-    <p class="when" id="deadline">About 5 minutes. Applications close <b>December 18, 2026</b>.</p>
+    <p class="when" id="deadline">About 5 minutes. Applications for the 2027 cohort close <b>December 18, 2026</b>.</p>
 
     <div class="helper">
       <h2>Fill in the form faster</h2>
-      <p>Six short questions. Open a step to copy what you need.</p>
+      <p>Start with how the program works, then the six form questions. Open a step to copy what you need.</p>
+
+      <details>
+        <summary>0. About the program</summary>
+        <div class="dbody">
+          <p>The Snowflake Data Superhero Program is Snowflake’s global community of data experts who share their knowledge through content, user groups, and speaking. Anyone can apply, and anyone can nominate a peer.</p>
+          <p><b>Members get</b> direct access to Snowflake’s product teams (roadmap talks, monthly enablement sessions), training and advanced certification opportunities, early invites to events like Snowflake Summit, and a network of fellow Superheroes.</p>
+          <p><b>Members do</b> create content, lead discussions in forums and user groups, and support others with advice and product feedback.</p>
+          <p><b>Timing:</b> nominations are accepted year-round. Applications for the 2027 cohort run from November 9 to December 18, 2026, and Snowflake looks at contributions made between December 2025 and November 2026. That window matches my story: we became a Snowflake customer in November 2025, and most of what you see on this page has happened since.</p>
+          <p>Source: <a href="https://www.snowflake.com/en/data-superheroes/" rel="noopener">snowflake.com/en/data-superheroes</a></p>
+        </div>
+      </details>
 
       <details>
         <summary>1. Your details</summary>
@@ -181,10 +193,11 @@
         <div class="dbody">
           <div class="row"><div><small>LinkedIn</small><span class="val">https://www.linkedin.com/in/mlichtwark</span></div><button class="copy" type="button">Copy</button></div>
           <div class="row"><div><small>Snowflake Community</small><span class="val">https://snowflake.discourse.group/u/snowmart</span></div><button class="copy" type="button">Copy</button></div>
-          <div class="row"><div><small>Reddit</small><span class="val">https://www.reddit.com/u/dataregulator3</span></div><button class="copy" type="button">Copy</button></div>
-          <div class="row"><div><small>GitHub</small><span class="val">https://github.com/dataregulator3</span></div><button class="copy" type="button">Copy</button></div>
-          <div class="row"><div><small>Meetup</small><span class="val">https://events.data-rostock.de/</span></div><button class="copy" type="button">Copy</button></div>
-          <p style="margin-top:8px">No blog or podcast yet, so leave those blank.</p>
+          <div class="row"><div><small>Other: Reddit</small><span class="val">https://www.reddit.com/u/dataregulator3</span></div><button class="copy" type="button">Copy</button></div>
+          <div class="row"><div><small>Other: GitHub</small><span class="val">https://github.com/dataregulator3</span></div><button class="copy" type="button">Copy</button></div>
+          <div class="row"><div><small>Other: Meetup</small><span class="val">https://events.data-rostock.de/</span></div><button class="copy" type="button">Copy</button></div>
+          <div class="row"><div><small>Other: Badges and certifications</small><span class="val">https://achieve.snowflake.com/profile/mclichtwark/wallet</span></div><button class="copy" type="button">Copy</button></div>
+          <p style="margin-top:8px">LinkedIn and Community have their own fields. Paste the rest into the “Other” fields; if there are only one or two, combine links in one field. No blog or podcast yet, so leave those blank.</p>
         </div>
       </details>
 
@@ -216,20 +229,23 @@
       <p class="kicker">A small team, no extra budget, and a habit of telling people how it went.</p>
       <p class="intro">Here’s the path from our first Snowflake login to a regional community, in the order it happened.</p>
 
+
+
       <h2 class="sec">The story so far</h2>
-      <p class="secsub">Everything below is something you can check.</p>
+      <p class="secsub">Where it’s public, the link is further down.</p>
 
       <ol class="tl">
         <li>
           <div class="at">November 2025</div>
           <h3>We become a Snowflake customer</h3>
-          <p>I started posting about the journey during the evaluation itself. The Snowflake hands-on badges were done before the contract was signed, and I passed SnowPro Core.</p>
+          <p>I started posting about the journey during the evaluation itself. The Snowflake hands-on badges were done before the contract was signed, and I hold the SnowPro Core certification.</p>
         </li>
         <li>
           <div class="at">The first six weeks</div>
           <h3>85% of a migration, with no new hires</h3>
           <p>Our PostgreSQL database was at its limit and there was no budget for more people. With SnowConvert and Cortex Code doing much of the heavy lifting, we moved 85% of the migration in six weeks and shipped.</p>
           <p>That became our “first-enable” approach: new data products and AI use cases go from idea to production far faster.</p>
+          <p>The same team then shipped three projects planned for the rest of the year: a new risk-carrier reporting flow, the replacement of a legacy insurance analytics tool (full calculation down from over four hours to 25 minutes), and our first Cortex-based data analytics agents, deployed on a Friday.</p>
         </li>
         <li>
           <div class="at">2026</div>
@@ -240,7 +256,8 @@
         <li>
           <div class="at">Summer and autumn 2026</div>
           <h3>Going on stage and joining the community</h3>
-          <p>I joined Snowflake Squad, presented “Schluss mit Daten.Warten” at the kickoff of the new Rostock AI community KI oder K.O. on September 9, and gave “From zero to heppyHero” at Snowflake World Tour Berlin on September 29, right before the keynote.</p>
+          <p>I joined Snowflake Squad, presented “Schluss mit Daten.Warten” at the kickoff of the new Rostock AI community KI oder K.O. on September 9, and gave “From zero to heppyHero” with my colleague Benjamin Siegler at Snowflake World Tour Berlin on September 29, right before the keynote.</p>
+          <p>The talk in three acts: a tiny team at its limit, the acceleration that followed, and where agents go next. It ended with our dos and don’ts: start with CoCo now, cut scope to 85% and ship, don’t wait for a bigger budget or team, and spend the time you win on taking people with you.</p>
         </li>
         <li>
           <div class="at">Autumn 2026</div>
@@ -306,10 +323,11 @@
             <li><a href="https://events.data-rostock.de/" rel="noopener">Baltic Sea Snowflake Meetup: events and tickets</a></li>
             <li><a href="https://snowflake.discourse.group/u/snowmart" rel="noopener">Snowflake Community profile (snowmart)</a></li>
             <li><a href="https://achieve.snowflake.com/profile/mclichtwark/wallet" rel="noopener">Badges and certifications</a></li>
-            <li>Snowflake Squad member, and part of the Berlin and Hamburg user groups</li>
+            <li>Snowflake Squad member, and regular attendee at the Berlin and Hamburg user groups</li>
           </ul>
         </div>
       </div>
+
 
       <h2 class="sec">What I’ll do with it</h2>
       <p class="secsub">Being a Data Superhero is a way of working, not a title to collect.</p>
@@ -342,10 +360,10 @@
     var el = document.getElementById('deadline');
     var bar = document.getElementById('barText');
     if (days > 1) {
-      el.innerHTML = 'About 5 minutes. Applications close <b>December 18, 2026</b>, ' + days + ' days left.';
+      el.innerHTML = 'About 5 minutes. Applications for the 2027 cohort close <b>December 18, 2026</b>, ' + days + ' days left.';
       bar.textContent = days + ' days left to nominate';
     } else if (days === 1) {
-      el.innerHTML = 'About 5 minutes. Applications close <b>today</b>.';
+      el.innerHTML = 'About 5 minutes. Applications for the 2027 cohort close <b>today</b>.';
       bar.textContent = 'Last day to nominate';
     } else {
       el.textContent = 'Applications for 2027 have closed. Thank you for the support.';
