@@ -57,16 +57,15 @@
       overflow-y: auto; padding: 40px 34px 34px;
     }
   }
-  .panel .who { font: 800 1rem var(--head); font-stretch: 110%; color: var(--ice); margin: 0 0 22px; }
-  .panel h1 { font-size: clamp(2rem, 4.6vw, 2.7rem); font-weight: 800; font-stretch: 92%; color: #fff; }
-  .panel .pitch { margin-top: 16px; font-size: 1rem; line-height: 1.6; color: #C9DCE6; }
+  .panel .who { font: 800 1rem var(--head); font-stretch: 110%; color: var(--ice); margin: 0 0 14px; }
+  .panel .ph { margin: 0; font-family: var(--head); line-height: 1.1; letter-spacing: -0.015em; font-size: clamp(1.9rem, 4vw, 2.4rem); font-weight: 800; font-stretch: 92%; color: #fff; }
   .go { display: block; text-align: center; margin-top: 22px; padding: 15px 20px; border-radius: 8px; background: #fff; color: var(--sea) !important; font: 800 1.02rem var(--head); text-decoration: none; }
   .go:hover { background: var(--ice); }
   .when { margin: 12px 0 0; font-size: .92rem; color: #A9C3D0; }
   .when b { color: #fff; }
 
   .helper { margin-top: 26px; border-top: 1px solid rgba(255,255,255,.2); padding-top: 18px; }
-  .helper > h2 { font-size: 1.05rem; font-weight: 800; color: #fff; margin-bottom: 4px; }
+  .helper h2 { font-size: 1.05rem; font-weight: 800; color: #fff; margin-bottom: 4px; }
   .helper > p { font-size: .9rem; color: #A9C3D0; margin-bottom: 12px; line-height: 1.5; }
   details { border-top: 1px solid rgba(255,255,255,.14); }
   details:last-of-type { border-bottom: 1px solid rgba(255,255,255,.14); }
@@ -98,6 +97,24 @@
   h2.sec { font-size: clamp(1.7rem, 3.4vw, 2.3rem); font-weight: 800; font-stretch: 95%; margin: 64px 0 6px; }
   .secsub { color: var(--muted); margin-bottom: 26px; }
 
+
+
+
+  /* headline in main column; on small screens it replaces the panel copy */
+  .top-intro { margin: 0 0 36px; }
+  .top-intro .byline { margin: 0 0 10px; font: 800 1.2rem var(--head); font-stretch: 105%; color: var(--brick); }
+  .top-intro h1 { font-size: clamp(2.2rem, 5vw, 3.3rem); font-weight: 800; font-stretch: 92%; max-width: 20ch; }
+  .top-intro .lead { margin: 18px 0 0; font-size: 1.2rem; line-height: 1.6; color: var(--muted); max-width: 58ch; }
+
+  /* program explainer */
+  .about { margin: 0 0 40px; background: var(--card); border: 1px solid var(--rule); border-top: 6px solid var(--ink); border-radius: 6px; padding: 22px 24px 6px; }
+  .about h2 { font-size: 1.35rem; font-weight: 800; font-stretch: 95%; margin-bottom: 10px; }
+  .about dl { margin: 14px 0 12px; display: grid; gap: 10px 20px; grid-template-columns: minmax(0, 1fr); }
+  @media (min-width: 700px) { .about dl { grid-template-columns: 140px minmax(0, 1fr); } }
+  .about dt { font: 800 1rem var(--head); }
+  .about dd { margin: 0; }
+  .about .fit { font-weight: 600; }
+  .about .src { font-size: .9rem; color: var(--muted); }
 
   /* timeline */
   .tl { list-style: none; margin: 0; padding: 0 0 0 26px; border-left: 3px solid var(--ink); }
@@ -144,6 +161,36 @@
   @media (min-width: 980px) { .bar { display: none; } }
 
   @media (max-width: 520px) { .nums li { grid-template-columns: minmax(0, 1fr); gap: 4px; } }
+
+  /* ---- nomination guide: desktop = sticky side panel, mobile = bottom sheet ---- */
+  .sheet-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+  .close, .scrim, .footer-legal { display: none; }
+  .bar-actions { display: flex; gap: 10px; }
+  .bar-actions > * { flex: 1; text-align: center; }
+  .helperbtn { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.55); font: 800 .95rem var(--head); padding: 10px 14px; border-radius: 8px; cursor: pointer; }
+  .helperbtn:hover { border-color: var(--ice); }
+  @media (max-width: 979px) {
+    .panel {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+      max-height: 88vh; max-height: 88dvh; overflow-y: auto; overscroll-behavior: contain;
+      padding: 20px 20px calc(24px + env(safe-area-inset-bottom, 0px));
+      border-radius: 16px 16px 0 0; box-shadow: 0 -10px 30px rgba(0,0,0,.35);
+      transform: translateY(105%); visibility: hidden;
+      transition: transform .25s ease, visibility 0s linear .25s;
+    }
+    .panel.open { transform: none; visibility: visible; transition: transform .25s ease, visibility 0s; }
+    .panel .who, .panel .ph, .panel .go, .panel .when { display: none; }
+    .helper { margin-top: 0; border-top: 0; padding-top: 0; }
+    .close { display: inline-block; font: 700 .85rem var(--head); padding: 7px 14px; border-radius: 8px; border: 1.5px solid var(--ice); background: transparent; color: var(--ice); cursor: pointer; }
+    .close:hover { background: var(--ice); color: var(--sea); }
+    .scrim { display: block; position: fixed; inset: 0; z-index: 35; background: rgba(5,20,30,.55); opacity: 0; visibility: hidden; transition: opacity .25s ease, visibility 0s linear .25s; }
+    .scrim.open { opacity: 1; visibility: visible; transition: opacity .25s ease; }
+    .bar { flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 8px; }
+    .bar span { text-align: center; font-size: .85rem; color: #C9DCE6; }
+    main { padding-bottom: calc(150px + env(safe-area-inset-bottom, 0px)); }
+    .footer-legal { display: block; }
+  }
+
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
 </head>
@@ -153,26 +200,14 @@
   <!-- ===== side panel ===== -->
   <aside class="panel" id="top">
     <p class="who">Martin Lichtwark</p>
-    <h1>Nominate me for the 2027 Snowflake Data Superhero Program</h1>
-    <p class="pitch">I lead Data &amp; AI at hepster, an insurtech in Rostock on Germany’s Baltic coast. I share what we learn with Snowflake in the open, and I’m building a Snowflake community from scratch on the Baltic coast.</p>
+    <p class="ph">Nominate me for 2027.</p>
 
-    <a class="go" href="https://www.surveymonkey.com/r/dshnomination" rel="noopener">Open the nomination form</a>
+    <a class="go" href="https://www.surveymonkey.com/r/dshnomination" rel="noopener">Nominate Martin for 2027</a>
     <p class="when" id="deadline">About 5 minutes. Applications for the 2027 cohort close <b>December 18, 2026</b>.</p>
 
     <div class="helper">
-      <h2>Fill in the form faster</h2>
-      <p>Start with how the program works, then the six form questions. Open a step to copy what you need.</p>
-
-      <details>
-        <summary>0. About the program</summary>
-        <div class="dbody">
-          <p>The Snowflake Data Superhero Program is Snowflake’s global community of data experts who share their knowledge through content, user groups, and speaking. Anyone can apply, and anyone can nominate a peer.</p>
-          <p><b>Members get</b> direct access to Snowflake’s product teams (roadmap talks, monthly enablement sessions), training and advanced certification opportunities, early invites to events like Snowflake Summit, and a network of fellow Superheroes.</p>
-          <p><b>Members do</b> create content, lead discussions in forums and user groups, and support others with advice and product feedback.</p>
-          <p><b>Timing:</b> nominations are accepted year-round. Applications for the 2027 cohort run from November 9 to December 18, 2026, and Snowflake looks at contributions made between December 2025 and November 2026. That window matches my story: we became a Snowflake customer in November 2025, and most of what you see on this page has happened since.</p>
-          <p>Source: <a href="https://www.snowflake.com/en/data-superheroes/" rel="noopener">snowflake.com/en/data-superheroes</a></p>
-        </div>
-      </details>
+      <div class="sheet-head"><h2>Your nomination guide</h2><button class="close" type="button" id="closeSheet" aria-label="Close nomination guide">Close</button></div>
+      <p>Six short questions. Open a step to copy what you need.</p>
 
       <details>
         <summary>1. Your details</summary>
@@ -226,6 +261,25 @@
   <!-- ===== main column ===== -->
   <main>
     <div class="inner">
+      <header class="top-intro">
+        <p class="byline">Martin Lichtwark</p>
+        <h1>Nominate me for the 2027 Snowflake Data Superhero Program</h1>
+        <p class="lead">I lead Data &amp; AI at hepster, an insurtech in Rostock on Germany’s Baltic coast. I share what we learn with Snowflake in the open, and I’m building a Snowflake community from scratch on the Baltic coast.</p>
+      </header>
+
+      <section class="about" aria-labelledby="about-h">
+        <h2 id="about-h">Why this program fits my work</h2>
+        <p>The Snowflake Data Superhero Program is Snowflake’s global community of data experts who share what they know through content, user groups, and speaking. Members get direct access to the product teams, training and certification opportunities, early invites to events like Snowflake Summit, and a network of peers. In return, they create content, lead discussions, and help others succeed.</p>
+        <dl>
+          <dt>An excellent match</dt>
+          <dd>That is what I’ve been doing since we started with Snowflake: writing and building learning material for others, speaking on stages, and starting a community in Rostock. The program would let me do more of it, with closer access to the product and to the people behind it.</dd>
+          <dt>Good timing</dt>
+          <dd>Snowflake looks at contributions from December 2025 to November 2026. We became a customer in November 2025, and most of what you see on this page has happened since. Nominations are accepted year-round, and applications for the 2027 cohort close on December 18, 2026.</dd>
+        </dl>
+        <p class="fit">I would be very happy about your nomination.</p>
+        <p class="src">Program details: <a href="https://www.snowflake.com/en/data-superheroes/" rel="noopener">snowflake.com/en/data-superheroes</a></p>
+      </section>
+
       <p class="kicker">A small team, no extra budget, and a habit of telling people how it went.</p>
       <p class="intro">Here’s the path from our first Snowflake login to a regional community, in the order it happened.</p>
 
@@ -342,14 +396,20 @@
       <footer>
         <p>Thank you for being part of a community that learns, builds, and grows together.</p>
         <p>Martin Lichtwark, Head of Data &amp; AI at hepster, Rostock.</p>
+        <p class="footer-legal">Personal page. Not affiliated with or endorsed by Snowflake Inc. or hepster.</p>
       </footer>
     </div>
   </main>
 </div>
 
+<div class="scrim" id="scrim"></div>
+
 <div class="bar">
   <span id="barText">Nominate Martin</span>
-  <a href="https://www.surveymonkey.com/r/dshnomination" rel="noopener">Open form</a>
+  <div class="bar-actions">
+    <button type="button" class="helperbtn" id="helperBtn" aria-expanded="false" aria-controls="top">Nomination guide</button>
+    <a href="https://www.surveymonkey.com/r/dshnomination" rel="noopener">Nominate Martin</a>
+  </div>
 </div>
 
 <script>
@@ -406,6 +466,47 @@
       setTimeout(function () { toast.textContent = ''; }, 2500);
     });
   });
+
+  // Nomination guide: bottom sheet on small screens
+  var panel = document.querySelector('.panel');
+  var scrim = document.getElementById('scrim');
+  var openBtn = document.getElementById('helperBtn');
+  var closeBtn = document.getElementById('closeSheet');
+  var lastFocus = null;
+  function openSheet() {
+    lastFocus = document.activeElement;
+    panel.classList.add('open'); scrim.classList.add('open');
+    panel.setAttribute('role', 'dialog'); panel.setAttribute('aria-modal', 'true'); panel.setAttribute('aria-label', 'Nomination guide');
+    openBtn.setAttribute('aria-expanded', 'true');
+    document.documentElement.style.overflow = 'hidden';
+    setTimeout(function () { closeBtn.focus(); }, 30);
+  }
+  function closeSheet() {
+    if (!panel.classList.contains('open')) return;
+    panel.classList.remove('open'); scrim.classList.remove('open');
+    panel.removeAttribute('role'); panel.removeAttribute('aria-modal'); panel.removeAttribute('aria-label');
+    openBtn.setAttribute('aria-expanded', 'false');
+    document.documentElement.style.overflow = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  openBtn.addEventListener('click', function () { panel.classList.contains('open') ? closeSheet() : openSheet(); });
+  closeBtn.addEventListener('click', closeSheet);
+  scrim.addEventListener('click', closeSheet);
+  document.addEventListener('keydown', function (e) {
+    if (!panel.classList.contains('open')) return;
+    if (e.key === 'Escape') { closeSheet(); return; }
+    if (e.key !== 'Tab') return;
+    var items = Array.prototype.filter.call(panel.querySelectorAll('a[href], button, summary'), function (el) { return el.offsetParent !== null; });
+    if (!items.length) return;
+    var first = items[0], last = items[items.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
+  if (window.matchMedia) {
+    var mq = window.matchMedia('(min-width: 980px)');
+    var onChange = function (ev) { if (ev.matches) closeSheet(); };
+    if (mq.addEventListener) mq.addEventListener('change', onChange); else if (mq.addListener) mq.addListener(onChange);
+  }
 })();
 </script>
 </body>
